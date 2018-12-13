@@ -246,9 +246,8 @@ public class termExtractionCoEvol {
 
 			// 4a
 			Set<String> case4a = new HashSet<String>(termsAddedInOp);
-			// termsAddedInO.removeAll(listOfTermsInD1);
-			// termsAddedInO.removeAll(listOfTermsInD2);
-			// case4a.retainAll(termsAddedInO);
+			termsAddedInO.removeAll(listOfTermsInD1);
+			termsAddedInO.removeAll(listOfTermsInD2);
 			System.out.println("Case 4a: " + case4a);
 			counter4a = counter4a + case4a.size();
 			System.out.println("size of 4a" + case4a);
