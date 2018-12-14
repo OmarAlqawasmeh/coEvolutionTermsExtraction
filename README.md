@@ -1,7 +1,7 @@
 # coEvolutionTermsExtraction
 
 
-Inside `resources`, there are two csv files with the different cases:
+Inside `src/resources`, there are two csv files with the different cases:
 
 1. `listofOandP.csv` <d1,d1,d1',d2',ns(O)>
 2. `Pnamespace.csv`  <d1,d1,d1',d2',ns(O')>

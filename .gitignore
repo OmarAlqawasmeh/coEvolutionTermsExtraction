@@ -1,2 +1,3 @@
 bin
-resources/Ontologies/
+src/resources/Ontologies/
+/target/
