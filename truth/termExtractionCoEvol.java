@@ -53,8 +53,8 @@ public class termExtractionCoEvol {
 		BufferedReader br = null;
 		FileReader fr = null;
 		
-		fr = new FileReader("/home/omar/Desktop/listofOandP.csv");
-		// fr = new FileReader("/home/omar/Desktop/Pnamespace.csv");
+		//fr = new FileReader("/home/omar/Desktop/listofOandP.csv");
+		fr = new FileReader("/home/omar/Desktop/Pnamespace.csv");
 
 		br = new BufferedReader(fr);
 
@@ -148,35 +148,72 @@ public class termExtractionCoEvol {
 			System.out.println("****************************");
 
 			// 1b
-			Set<String> case1b = new HashSet<String>(termsAddedInOp);
+			Set<String> case1b = new HashSet<String>(termsDeletedInO);
 			case1b.removeAll(listOfTermsInD1p);
 			case1b.removeAll(listOfTermsInD2p);
-			case1b.retainAll(termsDeletedInO);
+			//case1b.retainAll(termsDeletedInO);
 			System.out.println("case1b: " + case1b);
 			counter1b = counter1b + case1b.size();
 			System.out.println("size of case1b" + case1b);
 			System.out.println("****************************");
+			
+			
+			
+//			Set<String> case1b = new HashSet<String>(termsAddedInOp);
+//			case1b.removeAll(listOfTermsInD1p);
+//			case1b.removeAll(listOfTermsInD2p);
+//			case1b.retainAll(termsDeletedInO);
+//			System.out.println("case1b: " + case1b);
+//			counter1b = counter1b + case1b.size();
+//			System.out.println("size of case1b" + case1b);
+//			System.out.println("****************************");
+			
+			
 
 			// 1c
-			Set<String> case1c = new HashSet<String>(termsAddedInOp);
+			Set<String> case1c = new HashSet<String>(similarTermsInO);
 			case1c.removeAll(listOfTermsInD1p);
 			case1c.removeAll(listOfTermsInD2p);
-			case1c.retainAll(similarTermsInO);
 			System.out.println("case1c: " + case1c);
 			counter1c = counter1c + case1c.size();
 			System.out.println("size of 1c" + case1c);
 			System.out.println("****************************");
+			
+//			
+//			Set<String> case1c = new HashSet<String>(termsAddedInOp);
+//			case1c.removeAll(listOfTermsInD1p);
+//			case1c.removeAll(listOfTermsInD2p);
+//			case1c.retainAll(similarTermsInO);
+//			System.out.println("case1c: " + case1c);
+//			counter1c = counter1c + case1c.size();
+//			System.out.println("size of 1c" + case1c);
+//			System.out.println("****************************");
+
+			
 
 			// 1d
 
-			Set<String> case1d = new HashSet<String>(termsAddedInOp);
+			Set<String> case1d = new HashSet<String>(termsAddedInO);
 			case1d.removeAll(listOfTermsInD1p);
 			case1d.removeAll(listOfTermsInD2p);
-			case1d.retainAll(termsAddedInO);
+			//case1d.retainAll(termsAddedInO);
 			System.out.println("case1d: " + case1d);
 			counter1d = counter1d + case1d.size();
 			System.out.println("size of 1d" + case1d);
 			System.out.println("****************************");
+		
+			
+//			Set<String> case1d = new HashSet<String>(termsAddedInOp);
+//			case1d.removeAll(listOfTermsInD1p);
+//			case1d.removeAll(listOfTermsInD2p);
+//			case1d.retainAll(termsAddedInO);
+//			System.out.println("case1d: " + case1d);
+//			counter1d = counter1d + case1d.size();
+//			System.out.println("size of 1d" + case1d);
+//			System.out.println("****************************");
+			
+			
+			
 
 			// 2a
 			Set<String> case2a = new HashSet<String>(termsDeletedInOp);
@@ -187,30 +224,56 @@ public class termExtractionCoEvol {
 			counter2a = counter2a + case2a.size();
 			System.out.println("size of 2a" + case2a);
 			System.out.println("****************************");
+			
+			
 			// 2b
-			Set<String> case2b = new HashSet<String>(termsDeletedInOp);
-			case2b.retainAll(termsDeletedInO);
+			Set<String> case2b = new HashSet<String>(termsDeletedInO);
+			case2b.retainAll(termsDeletedInOp);
 			System.out.println("Case2b: " + case2b);
 			counter2b = counter2b + case2b.size();
 			System.out.println("size of 2b" + case2b);
 			System.out.println("****************************");
+			
+			
+//			Set<String> case2b = new HashSet<String>(termsDeletedInOp);
+//			case2b.retainAll(termsDeletedInO);
+//			System.out.println("Case2b: " + case2b);
+//			counter2b = counter2b + case2b.size();
+//			System.out.println("size of 2b" + case2b);
+//			System.out.println("****************************");
 
 			// 2c
-			Set<String> case2c = new HashSet<String>(termsDeletedInOp);
-			case2c.retainAll(similarTermsInO);
+			Set<String> case2c = new HashSet<String>(similarTermsInO);
+			case2c.retainAll(termsDeletedInOp);
 			System.out.println("case2c: " + case2c);
 			counter2c = counter2c + case2c.size();
 			System.out.println("size of 2c" + case2c);
 			System.out.println("****************************");
+			
+//			Set<String> case2c = new HashSet<String>(termsDeletedInOp);
+//			case2c.retainAll(similarTermsInO);
+//			System.out.println("case2c: " + case2c);
+//			counter2c = counter2c + case2c.size();
+//			System.out.println("size of 2c" + case2c);
+//			System.out.println("****************************");
 
 			// 2d
-			Set<String> case2d = new HashSet<String>(termsDeletedInOp);
-			case2d.retainAll(termsAddedInO);
+			Set<String> case2d = new HashSet<String>(termsAddedInO);
+			case2d.retainAll(termsDeletedInOp);
 			System.out.println("Case2d: " + case2d);
 			counter2d = counter2d + case2d.size();
 			System.out.println("size of 2d" + case2d);
 			System.out.println("****************************");
 
+//			Set<String> case2d = new HashSet<String>(termsDeletedInOp);
+//			case2d.retainAll(termsAddedInO);
+//			System.out.println("Case2d: " + case2d);
+//			counter2d = counter2d + case2d.size();
+//			System.out.println("size of 2d" + case2d);
+//			System.out.println("****************************");
+			
+			
+			
 			// 3a
 			Set<String> case3a = new HashSet<String>(similarTermsInOp);
 			// termsAddedInO.removeAll(listOfTermsInD1);
@@ -221,51 +284,102 @@ public class termExtractionCoEvol {
 			System.out.println("size of 3a" + case3a);
 			System.out.println("****************************");
 			// 3b
-			Set<String> case3b = new HashSet<String>(similarTermsInOp);
-			case3b.retainAll(termsDeletedInO);
+			Set<String> case3b = new HashSet<String>(termsDeletedInO);
+			case3b.retainAll(similarTermsInOp);
 			System.out.println("Case3b: " + case3b);
 			counter3b = counter3b + case3b.size();
 			System.out.println("size of 3b" + case3b);
 			System.out.println("****************************");
 
+			
+//			// 3b
+//						Set<String> case3b = new HashSet<String>(similarTermsInOp);
+//						case3b.retainAll(termsDeletedInO);
+//						System.out.println("Case3b: " + case3b);
+//						counter3b = counter3b + case3b.size();
+//						System.out.println("size of 3b" + case3b);
+//						System.out.println("****************************");
+//
+//						
 			// 3c
-			Set<String> case3c = new HashSet<String>(similarTermsInOp);
-			case3b.retainAll(similarTermsInO);
+			Set<String> case3c = new HashSet<String>(similarTermsInO);
+			case3b.retainAll(similarTermsInOp);
 			System.out.println("Case3c: " + case3c);
 			counter3c = counter3c + case3c.size();
 			System.out.println("size of 3c" + case3c);
 			System.out.println("****************************");
+			
+//			Set<String> case3c = new HashSet<String>(similarTermsInOp);
+//			case3b.retainAll(similarTermsInO);
+//			System.out.println("Case3c: " + case3c);
+//			counter3c = counter3c + case3c.size();
+//			System.out.println("size of 3c" + case3c);
+//			System.out.println("****************************");
 
 			// 3d
-			Set<String> case3d = new HashSet<String>(similarTermsInOp);
-			case3d.retainAll(termsAddedInO);
+			Set<String> case3d = new HashSet<String>(termsAddedInO);
+			case3d.retainAll(similarTermsInOp);
 			System.out.println("Case3d: " + case3d);
 			counter3d = counter3d + case3d.size();
 			System.out.println("size of 3d" + case3d);
 			System.out.println("****************************");
 
+			
+//			Set<String> case3d = new HashSet<String>(similarTermsInOp);
+//			case3d.retainAll(termsAddedInO);
+//			System.out.println("Case3d: " + case3d);
+//			counter3d = counter3d + case3d.size();
+//			System.out.println("size of 3d" + case3d);
+//			System.out.println("****************************");
+
+			
+			
+			
+			
+			
+			
+			
 			// 4a
 			Set<String> case4a = new HashSet<String>(termsAddedInOp);
-			termsAddedInO.removeAll(listOfTermsInD1);
-			termsAddedInO.removeAll(listOfTermsInD2);
+//			case4a.removeAll(listOfTermsInD1);
+//			case4a.removeAll(listOfTermsInD2);			
 			System.out.println("Case 4a: " + case4a);
 			counter4a = counter4a + case4a.size();
 			System.out.println("size of 4a" + case4a);
 			System.out.println("****************************");
+		
 			// 4b
-			Set<String> case4b = new HashSet<String>(termsAddedInOp);
-			case4b.retainAll(termsDeletedInO);
+			Set<String> case4b = new HashSet<String>(termsDeletedInO);
+			case4b.retainAll(termsAddedInOp);
 			System.out.println("Case 4b: " + case4b);
 			counter4b = counter4b + case4b.size();
 			System.out.println("size of 4b " + case4b);
 			System.out.println("****************************");
+			
+//			Set<String> case4b = new HashSet<String>(termsAddedInOp);
+//			case4b.retainAll(termsDeletedInO);
+//			System.out.println("Case 4b: " + case4b);
+//			counter4b = counter4b + case4b.size();
+//			System.out.println("size of 4b " + case4b);
+//			System.out.println("****************************");
+			
+			
 			// 4c
-			Set<String> case4c = new HashSet<String>(termsAddedInOp);
-			case4c.retainAll(similarTermsInO);
+			Set<String> case4c = new HashSet<String>(similarTermsInO);
+			case4c.retainAll(termsAddedInOp);
 			System.out.println("Case 4c: " + case4c);
 			counter4c = counter4c + case4c.size();
 			System.out.println("size of 4c " + case4c);
 			System.out.println("****************************");
+			
+			
+//			Set<String> case4c = new HashSet<String>(termsAddedInOp);
+//			case4c.retainAll(similarTermsInO);
+//			System.out.println("Case 4c: " + case4c);
+//			counter4c = counter4c + case4c.size();
+//			System.out.println("size of 4c " + case4c);
+//			System.out.println("****************************");
+//			
 			// 4d
 			Set<String> case4d = new HashSet<String>(termsAddedInOp);
 			case4d.retainAll(termsAddedInO);
