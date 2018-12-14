@@ -1,35 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package fr.ujm.omar.extractor;
 
+import java.util.Set;
+
+/**
+ *
+ * @author maxime.lefrancois
+ */
 public class InterestingCase {
+    
+    private PotentialInterestingCase interestingCase;
+    private Set<String> terms;
 
-	public InterestingCase(String ns, String d1, String d2, String d1p, String d2p) {
-		this.ns = ns;
-		this.d1 = d1;
-		this.d2 = d2;
-		this.d1p = d1p;
-		this.d2p = d2p;
+    public InterestingCase(PotentialInterestingCase interestingCase, Set<String> terms) {
+        this.interestingCase = interestingCase;
+        this.terms = terms;
+    }
 
-	}
+    public PotentialInterestingCase getInterestingCase() {
+        return interestingCase;
+    }
 
-	private String ns , d1, d2, d1p, d2p;
+    public Set<String> getTerms() {
+        return terms;
+    }
 
-	public String getNs() {
-		return ns;
-	}
-	
-	public String getD1() {
-		return d1;
-	}
+    public void setInterestingCase(PotentialInterestingCase interestingCase) {
+        this.interestingCase = interestingCase;
+    }
 
-	public String getD2() {
-		return d2;
-	}
+    public void setTerms(Set<String> terms) {
+        this.terms = terms;
+    }
 
-	public String getD1p() {
-		return d1p;
-	}
-
-	public String getD2p() {
-		return d2p;
-	}
+    @Override
+    public String toString() {
+        return "intersting case : \n"
+                + interestingCase + " for terms " + terms; //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
+    
 }
