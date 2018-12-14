@@ -1,4 +1,4 @@
-package truth;
+package fr.ujm.omar.extractor;
 
 public class InterestingCase {
 

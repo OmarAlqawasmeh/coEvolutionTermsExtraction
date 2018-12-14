@@ -1,4 +1,4 @@
-package truth;
+package fr.ujm.omar.extractor;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
