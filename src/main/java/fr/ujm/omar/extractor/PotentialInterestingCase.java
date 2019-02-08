@@ -36,8 +36,5 @@ public class PotentialInterestingCase {
     @Override
     public String toString() {
         return getD1() + ", "  + getD2() + ", " + getD1p() + ", " + getD2p() + ", " + getNs(); //To change body of generated methods, choose Tools | Templates.
-    }
-        
-        
-        
+    }   
 }
