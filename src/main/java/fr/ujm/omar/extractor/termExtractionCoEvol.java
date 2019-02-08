@@ -75,9 +75,8 @@ public class termExtractionCoEvol {
 		BufferedReader br = null;
 		FileReader fr = null;
 
-	//	fr=new FileReader("/media/omar/SanDisk_MyData/PhD/Pnamespace.csv");
-	//	fr = new FileReader("target/classes/LOV_cases.csv");
-		fr=new FileReader("target/classes/BioPortal_cases.csv");
+		fr = new FileReader("target/classes/LOV_cases.csv");
+	//	fr=new FileReader("target/classes/BioPortal_cases.csv");
 
 		br = new BufferedReader(fr);
 
