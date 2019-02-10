@@ -1,6 +1,6 @@
 # Ontology Co-Evolution
 
-Ontology co-evolution is a situation where: O is an ontology which has at
+**Ontology co-evolution** is a situation where: O is an ontology which has at
 least two versions v1 and v2. 
 O' is an ontology which has at least two versions v1' and v2'.
 
@@ -10,10 +10,10 @@ O is not as same as O'.
 
 Ontology co-evolution could happen if the following conditions are satisfied:
 
-$t(v_1) < t(v_2)$ 
-$t(v_1') < t(v_2')$ 
-$ t(v_1') < t(v_1) $
-$t(v_2') < t(v_2)$
+1. t(v_1) < t(v_2)
+2. t(v_1') < t(v_2') 
+3. t(v_1') < t(v_1)
+4. t(v_2') < t(v_2)
 
 # Src/resources
 Inside `src/resources`, there are two csv files with the different cases:
