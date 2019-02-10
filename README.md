@@ -16,7 +16,7 @@ Ontology co-evolution could happen if the following conditions are satisfied:
 3. t(v_1') < t(v_1)
 4. t(v_2') < t(v_2)
 
-# Src/resources
+# The different cases
 Inside `src/resources`, there are two csv files with the different cases:
 
 1. `LOV_cases.csv` <d1,d1,d1',d2',ns(O')>
