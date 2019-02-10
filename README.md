@@ -1,20 +1,19 @@
 # Ontology Co-Evolution
 
 Ontology co-evolution is a situation where: O is an ontology which has at
-least two versions v1 and v2. O' is an ontology which has at least two versions v1' and v2'.
+least two versions v1 and v2. 
+O' is an ontology which has at least two versions v1' and v2'.
+
 t(v) is the creation time for a version. O uses terms that exist in O'
-O!=O'
+
+O is not as same as O'.
 
 Ontology co-evolution could happen if the following conditions are satisfied:
 
-\begin{enumerate}
-    \item $t(v_1) < t(v_2)$ 
-    \item $t(v_1') < t(v_2')$ 
-    \item $ t(v_1') < t(v_1) $
-    \item $t(v_2') < t(v_2)$
-\end{enumerate}
-
-
+$t(v_1) < t(v_2)$ 
+$t(v_1') < t(v_2')$ 
+$ t(v_1') < t(v_1) $
+$t(v_2') < t(v_2)$
 
 # Src/resources
 Inside `src/resources`, there are two csv files with the different cases:
