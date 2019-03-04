@@ -2,6 +2,7 @@ package fr.ujm.omar.extractor;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -76,7 +77,7 @@ public class termExtractionCoEvol {
 		FileReader fr = null;
 
 		fr = new FileReader("target/classes/LOV_cases.csv");
-	//	fr=new FileReader("target/classes/BioPortal_cases.csv");
+		// fr = new FileReader("target/classes/BioPortal_cases.csv");
 
 		br = new BufferedReader(fr);
 
@@ -88,66 +89,41 @@ public class termExtractionCoEvol {
 
 			String arr[] = sCurrentLine.split(",");
 
-			 System.out.println(
-			 "v1:" + arr[0] + ", v2:" + arr[1] + ",v1p:" + arr[2] + ", v2p" +
-			 arr[3] + ", nsp:" + arr[4]);
-			
+			System.out.println(
+					"v1:" + arr[0] + ", v2:" + arr[1] + ",v1p:" + arr[2] + ", v2p" + arr[3] + ", nsp:" + arr[4]);
+
 			PotentialInterestingCase interestingCase = new PotentialInterestingCase(arr[4], "Ontologies/" + arr[0],
 					"Ontologies/" + arr[1], "Ontologies/" + arr[2], "Ontologies/" + arr[3]);
-//			PotentialInterestingCase interestingCase = new PotentialInterestingCase(arr[4], "/home/omar/Desktop/ontologies/" + arr[0],
-//					"/home/omar/Desktop/ontologies/" + arr[1], "/home/omar/Desktop/ontologies/" + arr[2], "/home/omar/Desktop/ontologies/" + arr[3]);
 
-
-			// differences in O (Music ontology)
 			Set<String> listOfTermsInD1 = getListOfTerms(interestingCase.getNs(), interestingCase.getD1());
 			Set<String> listOfTermsInD2 = getListOfTerms(interestingCase.getNs(), interestingCase.getD2());
 
-			// System.out.println("Terms in D1 " + listOfTermsInD1);
-			// System.out.println("Terms in D2 " + listOfTermsInD2);
-
 			Set<String> termsDeletedInO = new HashSet<>(listOfTermsInD1);
 			termsDeletedInO.removeAll(listOfTermsInD2);
-			// System.out.println("termsDeletedInD2" + termsDeletedInO);
-			// System.out.println(termsDeletedInO.size());
 			cDeletedinD2 = cDeletedinD2 + termsDeletedInO.size();
 
 			Set<String> termsAddedInO = new HashSet<>(listOfTermsInD2);
 			termsAddedInO.removeAll(listOfTermsInD1);
-			// System.out.println("termsAddedInD2" + termsAddedInO);
-			// System.out.println(termsAddedInO.size());
 			cAddedinD2 = cAddedinD2 + termsAddedInO.size();
 
 			Set<String> similarTermsInO = new HashSet<>(listOfTermsInD2);
 			similarTermsInO.retainAll(listOfTermsInD1);
-			// System.out.println("termsSimilarBetween D1_and_D2" +
-			// similarTermsInO);
-			// System.out.println(similarTermsInO.size());
 			similarTermsO = similarTermsO + similarTermsInO.size();
 
 			// differences in O' (Bio ontology)
 			Set<String> listOfTermsInD1p = getListOfTerms(interestingCase.getNs(), interestingCase.getD1p());
 			Set<String> listOfTermsInD2p = getListOfTerms(interestingCase.getNs(), interestingCase.getD2p());
 
-			// System.out.println("Terms in D1p " + listOfTermsInD1p);
-			// System.out.println("Terms in D2p " + listOfTermsInD2p);
-
 			Set<String> termsDeletedInOp = new HashSet<>(listOfTermsInD1p);
 			termsDeletedInOp.removeAll(listOfTermsInD2p);
-			// System.out.println("termsDeletedInD2p" + termsDeletedInOp);
-			// System.out.println(termsDeletedInOp.size());
 			cDeletedinD2p = cDeletedinD2p + termsDeletedInOp.size();
 
 			Set<String> termsAddedInOp = new HashSet<>(listOfTermsInD2p);
 			termsAddedInOp.removeAll(listOfTermsInD1p);
-			// System.out.println("termsAddedInD2p" + termsAddedInOp);
-			// System.out.println(termsAddedInOp.size());
 			cAddedinD2p = cAddedinD2p + termsAddedInOp.size();
 
 			Set<String> similarTermsInOp = new HashSet<>(listOfTermsInD2p);
 			similarTermsInOp.retainAll(listOfTermsInD1p);
-			// System.out.println("termsSimilarBetween D1p_and_D2p" +
-			// similarTermsInOp);
-			// System.out.println(similarTermsInOp.size());
 			similarTermsOp = similarTermsOp + similarTermsInOp.size();
 
 			// 1a
@@ -188,7 +164,7 @@ public class termExtractionCoEvol {
 			if (case2a.size() != 0) {
 				cases2a.add(new InterestingCase(interestingCase, case2a));
 			}
-			
+
 			// 2b
 			Set<String> case2b = new HashSet<>(termsDeletedInO);
 			case2b.retainAll(termsDeletedInOp);
@@ -196,8 +172,7 @@ public class termExtractionCoEvol {
 			if (case2b.size() != 0) {
 				cases2b.add(new InterestingCase(interestingCase, case2b));
 			}
-			
-			
+
 			// 2c
 			Set<String> case2c = new HashSet<>(similarTermsInO);
 			case2c.retainAll(termsDeletedInOp);
@@ -213,7 +188,6 @@ public class termExtractionCoEvol {
 			if (case2d.size() != 0) {
 				cases2d.add(new InterestingCase(interestingCase, case2d));
 			}
-			
 
 			// 3a
 			Set<String> case3a = new HashSet<>(similarTermsInOp);
@@ -223,8 +197,7 @@ public class termExtractionCoEvol {
 			if (case3a.size() != 0) {
 				cases3a.add(new InterestingCase(interestingCase, case3a));
 			}
-			
-			
+
 			// 3b
 			Set<String> case3b = new HashSet<>(termsDeletedInO);
 			case3b.retainAll(similarTermsInOp);
@@ -240,7 +213,7 @@ public class termExtractionCoEvol {
 			if (case3c.size() != 0) {
 				cases3c.add(new InterestingCase(interestingCase, case3c));
 			}
-				
+
 			// 3d
 			Set<String> case3d = new HashSet<>(termsAddedInO);
 			case3d.retainAll(similarTermsInOp);
@@ -266,7 +239,7 @@ public class termExtractionCoEvol {
 			if (case4b.size() != 0) {
 				cases4b.add(new InterestingCase(interestingCase, case4b));
 			}
-			
+
 			// 4c
 			Set<String> case4c = new HashSet<>(similarTermsInO);
 			case4c.retainAll(termsAddedInOp);
@@ -274,7 +247,6 @@ public class termExtractionCoEvol {
 			if (case4c.size() != 0) {
 				cases4c.add(new InterestingCase(interestingCase, case4c));
 			}
-			
 
 			// 4d
 			Set<String> case4d = new HashSet<>(termsAddedInOp);
@@ -283,7 +255,6 @@ public class termExtractionCoEvol {
 			if (case4d.size() != 0) {
 				cases4d.add(new InterestingCase(interestingCase, case4d));
 			}
-			
 
 		}
 
@@ -296,42 +267,52 @@ public class termExtractionCoEvol {
 				+ counter3a + "\n3b  " + counter3b + "\n3c  " + counter3c + "\n3d  " + counter3d + "\n4a  " + counter4a
 				+ "\n4b  " + counter4b + "\n4c  " + counter4c + "\n4d  " + counter4d + "\n");
 
-		
 //		System.out.println("cases 1b: ");
-//		System.out.println(cases1b);		
+//		System.out.println(cases1b);
+//
 //		System.out.println("cases 1c: ");
-//		System.out.println(cases1c);		
+//		System.out.println(cases1c);
+//
 //		System.out.println("cases 1d: ");
 //		System.out.println(cases1d);
-//		
-//		
+//
 //		System.out.println("cases 2a: ");
-//		System.out.println(cases2a);		
+//		System.out.println(cases2a);
+//
 //		System.out.println("cases 2b: ");
-//		System.out.println(cases2b);		
+//		System.out.println(cases2b);
+//
 //		System.out.println("cases 2c: ");
 //		System.out.println(cases2c);
+//
 //		System.out.println("cases 2d: ");
 //		System.out.println(cases2d);
 //
-//
 //		System.out.println("cases 3a: ");
 //		System.out.println(cases3a);
+//
 //		System.out.println("cases 3b: ");
 //		System.out.println(cases3b);
+//
 //		System.out.println("cases 3c: ");
 //		System.out.println(cases3c);
+//
 //		System.out.println("cases 3d: ");
 //		System.out.println(cases3d);
 //
-		System.out.println("cases 4a: ");
-		System.out.println(cases4a);
-		System.out.println("cases 4b: ");
-		System.out.println(cases4b);
-		System.out.println("cases 4c: ");
-		System.out.println(cases4c);
-		System.out.println("cases 4d: ");
-		System.out.println(cases4d);
+//		System.out.println("cases 4a: ");
+//		System.out.println(cases4a);
+//
+//		System.out.println("cases 4b: ");
+//		System.out.println(cases4b);
+//
+//		System.out.println("cases 4c: ");
+//		System.out.println(cases4c);
+//
+//		System.out.println("cases 4d: ");
+//		System.out.println(cases4d);
+
+		br.close();
 
 	}
 
