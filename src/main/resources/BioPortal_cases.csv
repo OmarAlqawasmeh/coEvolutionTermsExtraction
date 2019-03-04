@@ -1,6 +1,5 @@
 SIO_54.owl,SIO_55.owl,cito_2010-03-26.n3,cito_2015-07-03.n3,http://purl.org/spar/cito/
 SIO_66.owl,SIO_67.owl,schema_2016-05-04.n3,schema_2016-08-09.n3,http://schema.org/
-SIO_68.owl,SIO_69.owl,sio_2015-04-21.n3,sio_2016-09-27.n3,http://semanticscience.org/resource/
 OBOREL_11.owl,OBOREL_12.owl,cito_2015-07-03.n3,cito_2018-02-16.n3,http://purl.org/spar/cito/
 SCHEMA_1.owl,SCHEMA_2.owl,schema_2012-04-27.n3,schema_2017-03-23.n3,http://schema.org/
 SCHEMA_2.owl,SCHEMA_3.owl,schema_2017-03-23.n3,schema_2018-06-14.n3,http://schema.org/
@@ -8,7 +7,7 @@ CLO_61.owl,CLO_62.owl,cito_2015-07-03.n3,cito_2018-02-16.n3,http://purl.org/spar
 GFVO_16.owl,GFVO_17.owl,sio_2013-12-04.n3,sio_2015-04-21.n3,http://semanticscience.org/resource/
 GFVO_19.owl,GFVO_20.owl,sio_2015-04-21.n3,sio_2016-09-27.n3,http://semanticscience.org/resource/
 PLANA_5.owl,PLANA_6.owl,cito_2015-07-03.n3,cito_2018-02-16.n3,http://purl.org/spar/cito/
-OBI_BCGO_11.owl,/OBI_BCGO_12.owl,sio_2013-12-04.n3,sio_2015-01-11.n3,http://semanticscience.org/resource/
+OBI_BCGO_11.owl,OBI_BCGO_12.owl,sio_2013-12-04.n3,sio_2015-01-11.n3,http://semanticscience.org/resource/
 DCO_28.owl,DCO_30.owl,schema_2012-04-27.n3,schema_2015-02-04.n3,http://schema.org/
 ONS_15.owl,ONS_16.owl,cito_2015-07-03.n3,cito_2018-02-16.n3,http://purl.org/spar/cito/
 SIO_72.owl,SIO_73.owl,schema_2016-08-09.n3,schema_2017-08-14.n3,http://schema.org/
