@@ -262,7 +262,7 @@ public class termExtractionCoEvol {
 				+ " DeletedinD2 \n" + cDeletedinD2p + " DeletedinD2p \n" + similarTermsO + " similarTermsO\n"
 				+ similarTermsOp + " similarTermsOp \n");
 
-		System.out.println("1a   " + counter1a + "\n1b  " + counter1b + "\n1c  " + counter1c + "\n1d  " + counter1d
+		System.out.println("1a  " + counter1a + "\n1b  " + counter1b + "\n1c  " + counter1c + "\n1d  " + counter1d
 				+ "\n2a  " + counter2a + "\n2b  " + counter2b + "\n2c  " + counter2c + "\n2d  " + counter2d + "\n3a  "
 				+ counter3a + "\n3b  " + counter3b + "\n3c  " + counter3c + "\n3d  " + counter3d + "\n4a  " + counter4a
 				+ "\n4b  " + counter4b + "\n4c  " + counter4c + "\n4d  " + counter4d + "\n");
