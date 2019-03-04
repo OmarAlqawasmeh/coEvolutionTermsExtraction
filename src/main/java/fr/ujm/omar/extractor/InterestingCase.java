@@ -7,10 +7,6 @@ package fr.ujm.omar.extractor;
 
 import java.util.Set;
 
-/**
- *
- * @author maxime.lefrancois
- */
 public class InterestingCase {
     
     private PotentialInterestingCase interestingCase;
