@@ -3,7 +3,7 @@
 **Ontology co-evolution** is a situation where: O is an ontology which has at
 least two versions v1 and v2. 
 
-O' is an ontology which has at least two versions v1' and v2'.
+O' is a different ontology which has at least two versions v1' and v2'.
 
 t(v) is the creation time for a version. O uses terms that exist in O'.
 
