@@ -6,7 +6,6 @@
 package fr.ujm.omar.extractor;
 
 import java.util.Set;
-
 public class InterestingCase {
     
     private PotentialInterestingCase interestingCase;
