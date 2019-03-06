@@ -36,4 +36,5 @@ Inside `src/resources`, there are two csv files with the result for all the co-e
 
 ## To run
 
-1. run main method of class `extractor/termExtractionCoEvol`
+1. In `extractor/termExtractionCoEvol` , set the `FileReader` either to  `LOV_cases.csv` or to `BioPortal_cases.csv`
+2. Run main method of class `extractor/termExtractionCoEvol`

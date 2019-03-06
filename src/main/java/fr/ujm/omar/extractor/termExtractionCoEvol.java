@@ -76,8 +76,8 @@ public class termExtractionCoEvol {
 		BufferedReader br = null;
 		FileReader fr = null;
 
-		//fr = new FileReader("src/main/resources/LOV_cases.csv");
-		 fr = new FileReader("src/main/resources/BioPortal_cases.csv");
+		// fr = new FileReader("src/main/resources/LOV_cases.csv");
+		fr = new FileReader("src/main/resources/BioPortal_cases.csv");
 
 		br = new BufferedReader(fr);
 
@@ -110,7 +110,6 @@ public class termExtractionCoEvol {
 			similarTermsInO.retainAll(listOfTermsInD1);
 			similarTermsO = similarTermsO + similarTermsInO.size();
 
-			// differences in O' (Bio ontology)
 			Set<String> listOfTermsInD1p = getListOfTerms(interestingCase.getNs(), interestingCase.getD1p());
 			Set<String> listOfTermsInD2p = getListOfTerms(interestingCase.getNs(), interestingCase.getD2p());
 
@@ -126,9 +125,7 @@ public class termExtractionCoEvol {
 			similarTermsInOp.retainAll(listOfTermsInD1p);
 			similarTermsOp = similarTermsOp + similarTermsInOp.size();
 
-			// 1a
-			// case does not make sense, always 0
-
+			
 			// 1b
 			Set<String> case1b = new HashSet<>(termsDeletedInO);
 			case1b.removeAll(listOfTermsInD1p);
@@ -267,50 +264,50 @@ public class termExtractionCoEvol {
 				+ counter3a + "\n3b  " + counter3b + "\n3c  " + counter3c + "\n3d  " + counter3d + "\n4a  " + counter4a
 				+ "\n4b  " + counter4b + "\n4c  " + counter4c + "\n4d  " + counter4d + "\n");
 
-//		System.out.println("cases 1b: ");
-//		System.out.println(cases1b);
-//
-//		System.out.println("cases 1c: ");
-//		System.out.println(cases1c);
-//
-//		System.out.println("cases 1d: ");
-//		System.out.println(cases1d);
-//
-//		System.out.println("cases 2a: ");
-//		System.out.println(cases2a);
-//
-//		System.out.println("cases 2b: ");
-//		System.out.println(cases2b);
-//
-//		System.out.println("cases 2c: ");
-//		System.out.println(cases2c);
-//
-//		System.out.println("cases 2d: ");
-//		System.out.println(cases2d);
-//
-//		System.out.println("cases 3a: ");
-//		System.out.println(cases3a);
-//
-//		System.out.println("cases 3b: ");
-//		System.out.println(cases3b);
-//
-//		System.out.println("cases 3c: ");
-//		System.out.println(cases3c);
-//
-//		System.out.println("cases 3d: ");
-//		System.out.println(cases3d);
-//
-//		System.out.println("cases 4a: ");
-//		System.out.println(cases4a);
-//
-//		System.out.println("cases 4b: ");
-//		System.out.println(cases4b);
-//
-//		System.out.println("cases 4c: ");
-//		System.out.println(cases4c);
-//
-//		System.out.println("cases 4d: ");
-//		System.out.println(cases4d);
+		// System.out.println("cases 1b: ");
+		// System.out.println(cases1b);
+		//
+		// System.out.println("cases 1c: ");
+		// System.out.println(cases1c);
+		//
+		// System.out.println("cases 1d: ");
+		// System.out.println(cases1d);
+		//
+		// System.out.println("cases 2a: ");
+		// System.out.println(cases2a);
+		//
+		// System.out.println("cases 2b: ");
+		// System.out.println(cases2b);
+		//
+		// System.out.println("cases 2c: ");
+		// System.out.println(cases2c);
+		//
+		// System.out.println("cases 2d: ");
+		// System.out.println(cases2d);
+		//
+		// System.out.println("cases 3a: ");
+		// System.out.println(cases3a);
+		//
+		// System.out.println("cases 3b: ");
+		// System.out.println(cases3b);
+		//
+		// System.out.println("cases 3c: ");
+		// System.out.println(cases3c);
+		//
+		// System.out.println("cases 3d: ");
+		// System.out.println(cases3d);
+		//
+		// System.out.println("cases 4a: ");
+		// System.out.println(cases4a);
+		//
+		// System.out.println("cases 4b: ");
+		// System.out.println(cases4b);
+		//
+		// System.out.println("cases 4c: ");
+		// System.out.println(cases4c);
+		//
+		// System.out.println("cases 4d: ");
+		// System.out.println(cases4d);
 
 		br.close();
 
