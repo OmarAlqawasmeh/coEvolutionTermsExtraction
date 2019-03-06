@@ -26,14 +26,16 @@ Inside `src/resources`, there are two csv files with the different cases:
 1. `LOV_cases.csv` <d1,d1,d1',d2',ns(O')>
 2. `BioPortal_cases.csv`  <d1,d1,d1',d2',ns(O')>
 
-## To run
-
-1. run main method of class `extractor/termExtractionCoEvol`
-
 
 ## The overall results
 
-Inside `src/resources`, there are two csv files with the different cases:
+Inside `src/resources`, there are two csv files with the result for all the co-evolution cases:
 
-1. `LOV_cases.csv` <d1,d1,d1',d2',ns(O')>
-2. `BioPortal_cases.csv`  <d1,d1,d1',d2',ns(O')>
+1. `All results for LOV.csv` 
+2. `All results for BioPortal.csv`
+
+
+
+## To run
+
+1. run main method of class `extractor/termExtractionCoEvol`
