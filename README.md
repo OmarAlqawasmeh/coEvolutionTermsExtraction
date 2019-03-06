@@ -14,7 +14,7 @@ must be satisfied:
 
 ## The list of the targetted ontologies
 
-The set of the targetted ontologies are included in `resources/main`
+The set of the targetted ontologies are included in `resources/Ontologies`
 
 
 ## The different cases
