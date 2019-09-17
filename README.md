@@ -21,8 +21,8 @@ The set of the targetted ontologies are included in `resources/Ontologies`
 
 Inside `src/resources`, there are two csv files with the different cases:
 
-1. `LOV_cases.csv` `<v1,v1,v1',v2',ns(O')>`
-2. `BioPortal_cases.csv` `<v1,v1,v1',v2',ns(O')>`
+1. `LOV_cases.csv` `<v1,v2,v1',v2',ns(O')>`
+2. `BioPortal_cases.csv` `<v1,v2,v1',v2',ns(O')>`
 
 
 ## The overall results
