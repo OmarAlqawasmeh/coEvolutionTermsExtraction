@@ -5,7 +5,6 @@ library(foreign)
 library (agrmt)
 
 
-
 agreementClassification <- c(0, 9, 30, 93, 56)
 print ("Level of agreement for the classification")
 consensus(agreementClassification)
@@ -15,7 +14,7 @@ print ("Confidence value")
 consensus(confidenceValue)
 
 
-#-----------------------------------
+#----------------Pitfalls occurences-------------------
 
 P1occurences <- c(2,0,14,11,0)
 print ("Confidence value")
@@ -54,7 +53,8 @@ print ("Confidence value")
 consensus(P9occurences)
 
 
-# For each question we have 9 frequency vectors. Each vector represent the answers for the different participants.
+# For each question we have 9 frequency vectors. 
+# Each vector represent the answers for the different participants.
 
 # Q1. How problematic is this pitfall?
 
