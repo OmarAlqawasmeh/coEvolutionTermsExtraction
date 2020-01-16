@@ -233,9 +233,6 @@ P8 <- c(17,16,56,51,19)
 print ("Consensus value for P8")
 consensus(P8)
 
-
-
-
 P9 <- c(26,72,43,15,3)
 print ("Consensus value for P9")
 consensus(P9)
